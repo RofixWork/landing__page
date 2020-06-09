@@ -1,0 +1,13 @@
+@mixin overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@mixin head {
+    color: var(--mainColor);
+    text-transform: capitalize;
+    font-size: 35px;
+    margin-bottom: 5%;
+    font-weight: 600;
+}

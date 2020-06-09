@@ -1,0 +1,94 @@
+header{
+    height: 100vh;
+    
+    position: relative;
+    .navbar{
+        //background-color: red;
+        transition: .4s;
+        .navbar-brand{
+            img{
+                width:  80%;
+            }
+        }
+        .navbar-nav{
+            padding-top: 5px;
+            .nav-item{
+                padding: 5px;
+                .nav-link{
+                    color: var(--mainColor);
+                    text-transform: uppercase;
+                    font-size: 15px;
+                    margin: 0 5px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    .head{
+        height: 100vh;
+        .left{
+            height: 800px;
+            h2{
+                font-size: 45px;
+                text-transform: capitalize;
+                color: var(--mainColor);
+                line-height: 1.2;
+                font-weight: 700;
+            }
+            p{
+                width: 80%;
+                color: #888;
+                line-height: 1.8;
+                font-size: 15px;
+            }
+            button{
+                display: inline-block;
+                width: 150px;
+                height: 35px;
+                background-color: var(--mainColor);
+                color: white;
+                text-transform: capitalize;
+                font-weight: 500;
+                border: 2px solid #55acee;
+                border-radius: 20px;
+                overflow: hidden;
+                position: relative;
+                z-index: 2;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: block;
+                    width: 0;
+                    height: 100%;
+                    background-color: #55acee;
+                    z-index: -1;
+                    transition: width .4s;
+                }
+                &:hover::before{
+                    width: 100%;
+                }
+            }
+        }
+        .right{
+            height: 800px;
+            img{
+                width: 80%;
+            }
+        }
+
+        @media (max-width:992px) {
+            
+            .left{
+                margin-top: 10%;
+                margin-bottom: 20%;
+                
+            }
+            .left, .right{
+                height: 400px;
+            }
+        }
+    }
+    
+}
